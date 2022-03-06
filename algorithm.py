@@ -3,4 +3,4 @@ import sys
 
 
 def algo(data):
-	print(--)
+	print("--")
