@@ -1,2 +1,6 @@
 import os
-import system
+import sys
+
+
+def algo(data):
+	print(--)
