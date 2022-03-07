@@ -13,7 +13,10 @@ def main():
 	# print(data_dict)
 	mta = alg.SeatAllocator(10,20)
 	data_result = {}
-	for key in data_dict.keys():
+	keys_ = list(data_dict.keys())
+	# print(keys_)
+	keys_ = keys_[::-1]
+	for key in keys_:
 		data_result[key] = mta.allocate(data_dict[key])
 		# print(key + " " + data_result[key])
 
