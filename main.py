@@ -6,8 +6,9 @@ import algorithm as alg
 output_file = "./output_1.txt"
 
 def main():
-	if len(sys.argv) < 1:
+	if len(sys.argv) <= 1:
 		print("In sufficient arguments")
+		return
 
 	data_dict = fo.read_file(sys.argv[1])
 	# print(data_dict)
