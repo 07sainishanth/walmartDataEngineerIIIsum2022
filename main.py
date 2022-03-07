@@ -2,6 +2,7 @@ import os
 import sys
 import file_operations as fo
 import algorithm as alg
+import algo_1 as alg1
 
 output_file = "./output_1.txt"
 
@@ -12,7 +13,8 @@ def main():
 
 	data_dict = fo.read_file(sys.argv[1])
 	# print(data_dict)
-	mta = alg.SeatAllocator(10,20)
+	# mta = alg.SeatAllocator(10,20)
+	mta = alg1.SeatAllocator(10,20)
 	data_result = {}
 	keys_ = list(data_dict.keys())
 	# print(keys_)

@@ -24,6 +24,7 @@ def read_file(file_path):
 
 
 def save_file(file_path, data):
+	# {"Roo1": "E1,E2,E3", --}
 	result = []
 	# Saves the given data into file :
 	# Parses each key value pair into single line string
