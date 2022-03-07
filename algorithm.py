@@ -22,6 +22,8 @@ class SeatAllocator(object):
 
 
 	def allocate(self, data):
+
+		# Verfication of valid request
 		if data <= 0:
 			return "Invalid no of seats requested"
 		elif data > self.columns:
@@ -31,7 +33,9 @@ class SeatAllocator(object):
 		
 
 		i = 1
-		self.availableSeats -= data
+		self.availableSeats -= data # If valid decreasing seats avaialbility
+
+		# Veriying if available in same row
 		while i < len(self.seats)+1:
 			if len(self.seats[-1*i]) > data:
 				break
@@ -42,6 +46,8 @@ class SeatAllocator(object):
 		# print(data)
 		# print(self.availableSeats, "  ", data)
 
+
+		# If not available making distributed allocation 
 		if(i == len(self.seats)+1):
 			# print("da")
 			# Distributed allocation
@@ -56,6 +62,7 @@ class SeatAllocator(object):
 
 			return ret[:-1]
 		else :
+			# If available allocating seats in the row
 			ret = ""
 			while data > 0:
 				data -= 1
